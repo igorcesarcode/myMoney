@@ -12,7 +12,24 @@ import {
   Date
 } from './styled'
 
-export function TransactionsCards() {
+interface Category {
+  name: string;
+  icon: string;
+}
+interface Props {
+  title: string;
+  amount: string;
+  category:Category;
+  date: string;
+
+}
+
+export function TransactionsCards({
+  title,
+  amount,
+  category,
+  date
+} : Props) {
   return (
     <Container>
 

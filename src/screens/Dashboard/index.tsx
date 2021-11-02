@@ -22,32 +22,35 @@ export function Dashboard() {
 
   const data =[ 
     {
+      type: 'positive',
       title:"Desenvolvimento de site",
       amount:"12.000,00",
       category:{
         name: 'Vendas',
         icon: 'dollar-sign'
       },
-      date:"2017-01-01"
+      date:"2020-01-01"
     },
     {
+      type: 'negative',
       title:"Desenvolvimento de site2",
       amount:"12.000,00",
       category:{
-        name: 'Vendas',
-        icon: 'dollar-sign'
+        name: 'Alimentação',
+        icon: 'coffee'
       },
-      date:"2017-01-01"
+      date:"2020-01-01"
     }
     ,
     {
+      type: 'positive',
       title:"Desenvolvimento de site3",
       amount:"12.000,00",
       category:{
         name: 'Vendas',
         icon: 'dollar-sign'
       },
-      date:"2017-01-01"
+      date:"2021-01-01"
     }
   ]
   ;

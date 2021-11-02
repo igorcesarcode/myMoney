@@ -18,16 +18,16 @@ interface Category {
 }
 
 
-interface Props {
-  data:{
+export interface TransactionsCardsProps {
   type: 'positive' | 'negative';
   title: string;
   amount: string;
   category:Category;
   date: string;
+}
 
-  }
-
+export interface Props {
+  data: TransactionsCardsProps;
 }
 
 export function TransactionsCards({ data } : Props) {

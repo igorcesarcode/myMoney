@@ -13,17 +13,44 @@ import {
   Icon,
   HighlightCards,
   Transactions,
-  Title
+  Title,
+  TransactionList
 } from './styles'
 
 
 export function Dashboard() {
 
-  const data = [
+  const data =[ 
     {
-
+      title:"Desenvolvimento de site",
+      amount:"12.000,00",
+      category:{
+        name: 'Vendas',
+        icon: 'dollar-sign'
+      },
+      date:"2017-01-01"
+    },
+    {
+      title:"Desenvolvimento de site2",
+      amount:"12.000,00",
+      category:{
+        name: 'Vendas',
+        icon: 'dollar-sign'
+      },
+      date:"2017-01-01"
     }
-  ];
+    ,
+    {
+      title:"Desenvolvimento de site3",
+      amount:"12.000,00",
+      category:{
+        name: 'Vendas',
+        icon: 'dollar-sign'
+      },
+      date:"2017-01-01"
+    }
+  ]
+  ;
 
 
 
@@ -70,9 +97,16 @@ export function Dashboard() {
 
       <Transactions>
         <Title>Listagens</Title>
-        <TransactionsCards />
-        <TransactionsCards />
-        <TransactionsCards />
+
+        <TransactionList
+        data={data}
+        renderItem={({item}) => <TransactionsCards data={item} />}
+
+        />
+
+        
+
+
       </Transactions>
 
 

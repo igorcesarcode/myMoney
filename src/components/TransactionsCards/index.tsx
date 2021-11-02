@@ -16,31 +16,31 @@ interface Category {
   name: string;
   icon: string;
 }
+
+
 interface Props {
+  data:{
   title: string;
   amount: string;
   category:Category;
   date: string;
 
+  }
+
 }
 
-export function TransactionsCards({
-  title,
-  amount,
-  category,
-  date
-} : Props) {
+export function TransactionsCards({ data } : Props) {
   return (
     <Container>
 
-    <Title>Desenvovimento de Site</Title>
-    <Amount>R$ 10,000.00</Amount>
+    <Title>{data.title}</Title>
+    <Amount>{data.amount}</Amount>
     <Footer>
       <Category>
         <Icon name="dollar-sign"/>
-        <CategoryName>Vendas</CategoryName>
+        <CategoryName>{data.category.name}</CategoryName>
       </Category>
-      <Date>2021-01-22</Date>
+      <Date>{data.date}</Date>
     </Footer>
       
     </Container>
